@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+     <!--font awesome-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/font-awesome.css" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" type="text/css" href="./fontawesome-free-5.15.4-web/css/all.css">
+    <!--stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <title>The net present value calculation and risk assessment for investment projects</title>
+</head>
+<body>
+
+  <div class="general-container">
+
+<!--INTRO & SLIDESHOW-->
+    <div class="introduction">
+        <div class="intro">
+         <h1 class="title">Net Present Value and risk assessment for investments projects </h1>
+         <div class="line-intro"></div>
+        <h3 class="subtitle">With this application you can calculate the net present value (NPV) for an investment 
+        project and assess its risk using the Monte Carlo method.</h3>  
+        <div class="intro-text">
+          <p>Net Present Value (NPV) analysis is a form of intrinsic valuation and it is used across finance and 
+            accounting for determining the value of a business, investment security, capital project, new venture or cost 
+            reduction program. NPV is a measure of a project success reflecting the present value of its cash flows.</p>
+            <p>Cash flows are usually uncertain since both revenues and expenditure related to the project concern the future. Additionally, probabilities of particular scenarios may be unknown due to many factors 
+              (e.g. lack of historical data, lack of sufficient knowledge about possible states of nature etc.).</p>
+              <p>Monte Carlo simulation can assess a project's stand-alone risk. A project is analyzed under a large 
+                number of scenarios with values that are then used to calculate individual NPVs. In each trial, it is
+                 chosen at random a “sample” value for each input parameter, respecting the relative frequencies of its probability distribution. This process is repeated, generating as many NPVs we choose. The mean of the NPVs is determined and used as a measure of the project’s
+                 expected profitability, and the standard deviation of the NPVs or the probability for resulting NPV > 0 are used as measures of risk.</p>
+                 <p>So...</p>
+        </div> 
+        </div>
+
+        <div class="slideshow">
+        <div class="control left"><i class="fas fa-chevron-left"></i></div>
+        <div class="wrapper">
+                <div class="slides">
+                    <div class="slide slide-1">
+                      <h2>What is the Net Present Value?</h2>
+                      <p>The net present value (NPV) is the value of a project. This is simply the present 
+                        value of the project’s free cash flows discounted at the cost of capital over the life of a project.</p>
+                        <p>The NPV tells us how much a project contributes to shareholder wealth; the larger the NPV, the more value the project adds—and added value means a higher stock price. 
+                          This is why the NPV is the best selection criterion, primarily because it 
+                          addresses directly the central goal of financial management—maximizing shareholder wealth.</p>
+                            <p>That is, a project with a NPV of $1 million is expected to increase shareholder wealth by $1 
+                              million. Thus, projects with positive NPV (NPV > 0) are expected to add to shareholder wealth 
+                              while projects with negative NPV (NPV < 0) should be shunned.</p>
+                                <p>The NPV is used in capital budgeting to analyze the profitability of a projected investment.</p>
+                    </div>
+                    <div class="slide slide-2">
+                       <h2>How to calculate the NPV?</h2>
+                      <p>A project’s NPV is calculated as the present value of all cash flows over the life of the project less the initial
+                         investment. You can also find <a href="https://corporatefinanceinstitute.com/resources/valuation/net-present-value-npv/">
+                          
+                          here</a> a broader introduction on NPV calculation.</p>
+                    
+                      <p>So, to apply the NPV as a valuation method, we need to know the project’s estimated cash flows and
+                         the required rate of return (the cost of capital) in order to discount the cash flows. The required rate 
+                         of return should reflect the cost of long-term debt and equity capital funds 
+                        for projects with the same risk as the one under consideration.</p>
+                      </div>
+                    
+                  
+                    <div class="slide slide-3">
+                       <h2>What is Monte Carlo Analysis in Project Management?</h2>
+                        <p>Generally, Monte Carlo simulation can be understood as the process of repeating
+                           the same experiment for "n" times, using randomly generated numbers that follow 
+                           the same distribution of our data to simulate a variable of the problem. For investment projects, NPV,
+                            IRR, payback period, etc. can be simulated.</p>
+                      <p>The computer randomly picks a value for each variable—units sold, sales price, variable costs per 
+                        unit, and so forth. Those values are then used to calculate an NPV (or, other indicator), and that NPV
+                         is stored. Next, a second set of input values is selected at random, and a second NPV is calculated. 
+                         This process is repeated a number of times (1,000 or more), generating NPVs for each one of them. 
+                        The mean of the NPVs as a measure of profitability and the probability for NPV  > 0 as a meassure of risk are then determined.</p>
+                        <p>Business analysts choose a probability distribution that fits the actual behavior of the process underlying
+                           the input parameter: uniform probability distribution, normal probability distribution or exponential probability distribution. Most distributions have their own input 
+                          parameters you can use to closely fit the values in the distribution to the values of the process.</p>
+                    </div>
+                    <div class="slide slide-4">
+                       <h2>Assumptions used in this application</h2>
+                      <ul>
+                        <li>For simplicity, we consider that the investment consists of fixed assets and their salvage value is zero, 
+                          but the adaptation of our application to the various requirements can beeasily done upon request.</li>
+                        <li>After the initial investments are made, the project will hopefully produce positive
+                          cash flows over its operating life. These are calculated as EBIT(1 - tax rate) + Depreciation.</li>
+                        <li>In some cases, the firm may also need to make continued investments throughout
+                           the life of the project, particularly for a growing project where the company 
+                           needs to steadily add fixed assets and inventory over time. This changes in my code can be insertd 
+                           upon request.</li>
+                        <li>I use here the uniform probability distribution relevant for the annual revenues and 
+                          annual operational expenditures. The probability that NPV > 0 as a measure of risk is calculated by using 
+                          the Monte Carlo risk analysis method.</li>
+                        <li>The user must insert the investment expenditures (in dollars, euros etc.), so that
+                           the table in the form can generate other inputs for inserting the annual revenues 
+                           and expenditures (also in dollars, euros etc.). Likewise, the cost of capital and the income
+                            tax rate as percentages (for example 5 for 5% etc.) are necessary for calculating the NPV, the mean and the probability of a NPV > 0.</li>
+                      </ul>
+                      
+                    </div>
+                </div> 
+         <div class="play-pause"><i class="fas fa-play"></i></i></div>    
+        </div>  
+         <div class="control right"><i class="fas fa-chevron-right"></i></div>  
+    </div>
+        
+</div>
+    
+<div class="begin"><h2>Let's begin!</h2><i class="fas fa-spinner"></i> </div>
+
+
+<!--NPV application-->
+<div class="appplication-container">
+<div class="application">
+  
+    <div class="forms">
+<!--THE FIRST FORM-->
+        <form class="form__1">
+          <div class="input__field">
+            <input type="number" id="number" placeholder="Number of years..." class="input nontab">
+            <label for="number">The project life in years:</label>
+        </div> 
+        <button class="btn btn__1"><span>Submit</span></button>
+    </form>
+
+<!--THE SECOND FORM-->
+        <form action="" class="form__2">
+           <table class="table">
+            <tr>
+                <th class="year">Year</th>
+                <th class="revenues">Revenues</th>
+                <th class="expenditures">Expenditures</th>
+            </tr>
+        </table> 
+        <div class="input__field">    
+          <input type="number" id="investment" placeholder="Investment in euros, dollars etc. ..." class="input nontab">
+          <label for="investment">The initial investment:</label>  
+        </div>
+
+          <div class="input__field">
+        <input type="number" id="capital" placeholder="Cost of capital as % ..." class="input nontab">
+        <label for="capital">The cost of capital:</label>
+          </div>
+       
+          <div class="input__field">
+        <input type="number" id="tax" placeholder="Tax rate as % ..." class="input nontab">
+        <label for="tax">The tax rate:</label>
+          </div>
+
+        <button class="btn btn__2"><span>Have fun!</span><span>Submit</span></button>
+
+        <div class="result">
+          <h4>Your results</h4>
+          <p class="npv">Net present value = </p>
+          <p class="probability"></p>
+          <p class="mean"></p>
+          <p>Number of iterations = 100,000</p>
+          <p>Distribution: uniform - lower: 0; upper: 1</p>
+        </div>
+        </form>
+    </div>
+
+    <div class="info">
+      <div class="description">
+        <p class="text">Please insert the number of years!</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!--FOOTER-->
+  <div class="footer">
+        <div class="middle-lines">
+        <div class="middle-line"><div class="line"></div></div>
+        <h4>Need help? Contact me!</h4>
+        <div class="middle-line"><div class="line"></div></div>
+        </div>
+
+        <div class="contact-icons">
+            <a href="mailto:d_mihaela@msn.com" title="Email"><i class="fas fa-envelope-open"></i></a>
+            <a href="https://github.com/miha11-hash" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://t.me/mihaela112" title="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.facebook.com/mihaela.diaconu.908133" title="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+  
+    <p class="name">&#169; 2022 <span class="name" data-content="Mihaela Diaconu. " title="That's me!">
+      Mihaela Diaconu. </span><span class="copy">All rights reserved</span></p><br><br>
+  </div>
+
+</div>
+
+  <script src="scripts/slideshow.js"></script>
+  <script src="scripts/application.js"></script>
+</body>
+</html>

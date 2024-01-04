@@ -218,6 +218,8 @@ form__2.addEventListener("submit", (e) => {
         text.innerText = "Please complete all fields. Try again!";
         document.querySelector(".result").style.display = "none";
     }
+    
+    document.querySelector(".btn__2").disabled = true;
 })
 
 
